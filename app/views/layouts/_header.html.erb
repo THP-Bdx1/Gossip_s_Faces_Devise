@@ -1,0 +1,26 @@
+<header class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <li class="nav-item">
+            <h5><a class="text-white" href="/">Accueil</a> </h5>
+        </li>
+        <nav>
+            <ul class="nav navbar-nav navbar-right" class="text-white">
+            <% if user_signed_in? %>
+                <li class="nav-item">
+                    <h5><a class="text-white" href="/gossips">La page des Gossips</a> </h5>
+                </li>
+                <li class="nav-item">
+<h5><a class="text-white" href="/users/sign_out" data-method='delete'>Se déconnecter</a> </h5>
+                </li>
+                <% else %>
+                <li class="nav-item">
+<h5><a class="text-white" href="/users/sign_in">Enregistre-toi !</a> </h5>
+                </li>
+                <li class="nav-item">
+<h5><a class="text-white" href="/users/sign_up">Inscris-toi !</a> </h5>
+                </li>
+                <% end %>
+            </ul>
+        </nav>
+    </div>
+</header>

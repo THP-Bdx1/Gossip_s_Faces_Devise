@@ -1,0 +1,21 @@
+<h1>Helloooooo</h1>
+<ul>
+    <% if user_signed_in? %>
+    <li>
+        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+    </li>
+    <li>
+        Coucou <%= current_user.email %>
+    </li>
+        <li>
+            <%= link_to "Édite ton profil", edit_user_registration_path %>
+        </li>
+    <% else %>
+    <li>
+        <%= link_to "S'enregistrer", new_user_session_path %>
+    </li>
+    <li>
+        <%= link_to "S'inscrire", new_user_registration_path %>
+    </li>
+<% end %>
+</ul>

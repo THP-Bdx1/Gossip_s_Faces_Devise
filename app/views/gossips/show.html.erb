@@ -1,0 +1,18 @@
+<body style="margin-left: 10px">
+<!-- #NOM UTILISATEUR -->
+<h1>Voilà le potin de ses morts de
+        <%=User.find(@gossip.user_id).name%>! <img src="http://image.noelshack.com/fichiers/2018/44/4/1541101054-wineload.gif"
+                height="60" width="60"></h1>
+<br><br>
+<h1>Titre de merde : <%=@gossip.title%></h1>
+<br><br>
+<!-- #GOSSIP CONTENT -->
+<h2><blockquote>
+        <img src="http://image.noelshack.com/fichiers/2018/44/4/1541076385-silent-clipart-whispers-10.png" 
+        height="30" width="30">
+        <%= @gossip.content %>
+</blockquote></h2>
+
+
+<p><a href="/gossips" class="btn btn-primary">Revenir aux gossips</a></p>
+</body>
